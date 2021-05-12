@@ -1,5 +1,6 @@
 # JS-Tutorial
 [JS를 알기까지](./tutorials)
+[https://developer.mozilla.org/ko/docs/Web/JavaScript](https://developer.mozilla.org/ko/docs/Web/JavaScript) 를 기초로 작성할 예정입니다.
 ---
 
 
