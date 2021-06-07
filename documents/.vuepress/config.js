@@ -2,9 +2,9 @@ module.exports = {
   title: "JS-Tutorial",
   description: "about JavaScript",
   dest: "build",
-  base: "/js-tutorial/",
+  base: "/JS-Tutorial/",
   themeConfig: {
-    sidebar: ["introduce", "1.whatIsJS", "components"],
+    sidebar: ["introduce", "components"],
     nav: [
       {
         text: "GitHub", link: "https://github.com/republic-of-JS"
