@@ -40,4 +40,4 @@ console.log("Hello, World");
   
 ---
 
-[다음 ->](./1.whatIsJS.md)
+[다음 ->](1.whatIsJS.md)
