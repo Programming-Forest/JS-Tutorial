@@ -1,0 +1,12 @@
+{
+  "name": "JS-Tutorial",
+  "description": "Learned JS",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.8.2"
+  }
+}
