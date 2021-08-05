@@ -17,5 +17,7 @@ module.exports = {
         link: "https://discord.gg/68dBHx56rm",
       },
     ],
+    smoothScroll: true,
+    lastUpdated: "Last Updated",
   },
 };
