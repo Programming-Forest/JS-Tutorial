@@ -2,8 +2,8 @@
   "name": "JS-Tutorial",
   "description": "Learned JS",
   "scripts": {
-    "dev": "vuepress dev documents",
-    "build": "vuepress build documents"
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
   },
   "license": "ISC",
   "devDependencies": {
