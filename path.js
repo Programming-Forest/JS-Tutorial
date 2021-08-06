@@ -1,4 +1,4 @@
-const IntroduceList = ["introduce", "components"];
+const IntroduceList = ["introduce", "install", "HelloWorld"];
 const BasicsList = [];
 module.exports = [
   {
