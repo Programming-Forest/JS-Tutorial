@@ -71,5 +71,3 @@ console.log("Hello, World");
   |--|--|
   |HTML, CSS, DOM | 웹페이지 스크립팅 |
   |node.js, yarn, deno | node.js|
-
----
