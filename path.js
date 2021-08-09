@@ -1,5 +1,5 @@
 const IntroduceList = ["introduce", "install", "HelloWorld"];
-const BasicsList = [];
+const BasicsList = ["data_struct", "data_type"];
 module.exports = [
   {
     title: "시작하기에 앞서..",
