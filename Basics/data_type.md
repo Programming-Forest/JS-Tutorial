@@ -157,3 +157,48 @@ console.log(i); // ReferenceError: i is not defined
 이처럼 `{}` 중괄호로 이루어진 블럭 단위로 `scope`가 구분이 되어, 변수 사용 범위를 지정해준다.
 
 `function-scoped`처럼 여러 변수가 나타나지 않기에, 인기가 많은 편이다.
+
+## 기본적인 7가지 타입
+
+최신 ECMAScript 표준은 기본적인 7가지의 자료형을 정의합니다.
+
+1. Boolean
+2. Null
+3. Undefined
+4. Number
+5. String
+6. Symbol
+7. Object
+
+다음 중 1~6번의 경우 기본 자료형(Primitive)이다.
+
+### 기본 타입(Primitive)
+
+7번인 `Object`를 제외한 모든 값은 변경 불가능한 값입니다. (immutable value)
+
+이는 추후 JS-Tutorial이 아닌, 다른 곳에서 설명할 예정이니 기다려주시길 바랍니다 ㅎ..
+
+#### Boolean 타입
+
+`Boolean`은 논리적인 요소를 뜻하며, `true` 또는 `false`의 값을 지니게 된다.
+
+#### Null 타입
+
+`Null`은 한 가지 값인 `null`만을 의미합니다.
+
+`Null`은 타입인 반면 `null`은 값을 의미합니다.  
+`Null`은 [다음](https://developer.mozilla.org/ko/docs/Glossary/Null)을 참조 바랍니다.  
+`null`은 어떤 값이 **의도적**으로 비어있음을 표현하며, `Boolean`연산에서는 `false`를 뜻합니다.
+
+#### Undefined 타입
+
+값을 할당하지 않은 변수는 `undefined`값을 지닙니다.
+
+`Undefined`는 타입이며, `undefined`는 값입니다.
+선언한 이후, 값을 할당하지 않은 변수 혹은 인수에 자동으로 `undefined`라는 값이 `Undefined`라는 타입을 가지고 할당됩니다.
+
+#### Number 타입
+
+#### String 타입
+
+#### Symbol 타입
