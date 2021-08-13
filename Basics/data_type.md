@@ -274,3 +274,65 @@ JS 원시값의 불변성에 대해서 검색해보고 배워보심이 좋습니
 그러기에 복잡한 데이터를 나타낼 경우에는 문자열을 분석해서 적합하게 자료구조를 이용하는 것이 좋습니다.
 
 #### Symbol 타입
+
+이 타입은 ECMAScript 6 에서 추가되었습니다.  
+Symbol은 **유일**하고 **변경 불가능한(immutable)** 원시값(primitive value)입니다.  
+또한 객체 속성의 `key` 값으로 이용될 수 있습니다.
+
+이 타입은 주로 이름의 충돌 위험이 없는 **유일한** 객체의 프로퍼티 키를 만들기 위해 사용합니다.
+
+심볼은 생성하기 위해 `new`키워드를 사용하지 않고, `Symbol()`함수로 생성합니다.  
+이는 호출될 때마다 `Symbol`값을 생성하며, 이때 생성된 값은 객체가 아닌, 기본값으로써 생성됩니다.
+
+```js
+const symbol1 = Symbol();
+const symbol2 = Symbol(42);
+const symbol3 = Symbol("foo");
+
+console.log(symbol1);
+// expected output: "Symbol()"
+console.log(typeof symbol1);
+// expected output: "symbol"
+
+console.log(symbol2 === 42);
+// expected output: false
+
+console.log(symbol3.toString());
+// expected output: "Symbol(foo)"
+
+console.log(Symbol("foo") === Symbol("foo"));
+// expected output: false
+```
+
+또한 `Symbol()` 함수에 이용된 문자열 인자값은 그저 `Symbol`에 대한 설명(description)으로 디버깅 용도로만 이용됩니다.
+
+##### Symbol의 이용
+
+```js
+const obj = {};
+
+obj.first = "첫번째 프로퍼티";
+obj[123] = 123;
+obj["first" + 123] = true;
+// obj.456 = 789; // Uncaught SyntaxError: Unexpected number
+
+console.log(obj);
+// expected output : {123: 123, first: "첫번째 프로퍼티", first123: true}
+console.log(obj[first]); // "첫번째 프로퍼티"
+```
+
+다음처럼 객체의 프로퍼티 키는 빈 문자열을 포함하는 모든 문자열로 만들 수 있습니다.
+
+또한 다음처럼 Symbol을 이용하여 객체의 프로퍼티 키로 사용가능합니다.
+
+```js
+const obj = {};
+
+const keySymbol = Symbol("keys");
+obj[keySymbol] = 123;
+
+console.log(obj); // {Symbol(keys): 123}
+console.log(obj[keySymbol]); // 123
+```
+
+#### Symbol 객체
