@@ -336,3 +336,9 @@ console.log(obj[keySymbol]); // 123
 ```
 
 #### Symbol 객체
+
+`Symbol()`은 함수객체의 형태입니다. 그러기에 여러 프로퍼티와 메서드를 지니고 있죠
+
+[사진1]
+
+이 수많은 프로퍼티와 메서드들 중 `length`와 `prototype`을 제외한 프로퍼티를 `Well-Known Symbol`이라고 부릅니다.
