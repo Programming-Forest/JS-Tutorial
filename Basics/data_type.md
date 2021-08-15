@@ -170,7 +170,7 @@ console.log(i); // ReferenceError: i is not defined
 6. Symbol
 7. Object
 
-다음 중 1~6번의 경우 기본 자료형(Primitive)이다.
+다음 중 1~6번의 경우 기본 자료형(Primitive)이며, 7번은 별도로 다룬다.
 
 ### 기본 타입(Primitive)
 
@@ -342,3 +342,54 @@ console.log(obj[keySymbol]); // 123
 ![image](https://user-images.githubusercontent.com/64676070/129447049-a5ec5288-70cf-4e40-8b5b-0fe8695c672e.png)
 
 이 수많은 프로퍼티와 메서드들 중 `length`와 `prototype`을 제외한 프로퍼티를 `Well-Known Symbol`이라고 부릅니다.
+
+### Object
+
+컴퓨터 과학에서는 이를 `식별자로 참조할 수 있는 메모리에 있는 값`이라고 부른다.
+
+> 식별자는 코드 내의 변수, 함수, 혹은 속성을 식별하는 문자열입니다.
+
+#### 형태
+
+JS에서는 다음과 같은 형태를 지닙니다.
+
+```js
+const object1 = { bar: "bar", foo: 123 };
+```
+
+#### 속성
+
+JS에서, 객체(Object)는 속성들을 담고 있는 `collection`으로 볼 수 있습니다. 그러기에 위에서 본 형태랑 비슷한거죠
+
+이는 [객체 리터럴 문법](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals)으로 객체의 속성에 대해 여러 기능을 사용가능합니다.
+
+> 초기화, 추가, 제거 등
+
+또한 이 객체의 속성들은 어떠한 자료형이든 될 수 있습니다. 심지어 객체를 포함해서 말이죠.
+
+그 덕에 복잡한 데이터 구조를 형성하는게 가능해집니다.  
+그리고 이러한 속성들을 구분하는 것이 바로 `key`입니다.
+
+이 `key`는 값이 `String`이거나 `Symbol`입니다.
+
+또한 두 조율의 객체 속성이 있는데, 이들은 종류에 따라 특정 값을 지닐 수 있습니다.
+
+> 데이터 속성과 접근자 속성이 여기에 해당합니다.
+
+##### 데이터 속성
+
+| 특성(Attribute)  | 자료형                    | 설명                                                                                                                                     | 기본값    |
+| ---------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| [[Value]]        | JavaScript 타입 모두 가능 | 이 속성에 대한 get 접근으로 반환되는 값                                                                                                  | undefined |
+| [[Writable]]     | Boolean                   | false라면, 이 속성의 [[Value]]을 바꿀 수 없다.                                                                                           | false     |
+| [[Enumerable]]   | Boolean                   | true라면, 이 속성은 [for...in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 루프에서 열거 가능 | false     |
+| [[Configurable]] | Boolean                   | false라면, 이 속성은 제거 불가, [[Value]]와 [[Writable]] 외에는 수정 불가                                                                | false     |
+
+##### 접근자 속성
+
+| 특성(Attribute)  | 자료형                                                | 설명                                                                                                                                     | 기본값    |
+| ---------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| [[Get]]          | Function 객체 혹은 undefined                          | 이 속성의 값에 접근 시 인자 목록 없이 함수 호출, 함수의 리턴값으로 속성값을 가져온다.                                                    | undefined |
+| [[Set]]          | Function 객체 혹은 undefined                          | 이 속성의 값이 교체될 시, 먼저 할당된 값을 인자로 함수가 호출된다.                                                                       | undefined |
+| [[Enumerable]]   | Boolean                                               | true라면, 이 속성은 [for...in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 루프에서 열거 가능 | false     |
+| [[Configurable]] | false라면, 이 속성은 제거 불가, 데이터 속성 수정 불가 | false                                                                                                                                    |
