@@ -1,6 +1,6 @@
 # JS Tutorial
 
-해당 튜토리얼은 해당 디스코드 채널 [JS 공화국](https://discord.gg/EQaMqSC5ca)에서 만들게 된 자료입니다.
+해당 튜토리얼은 해당 디스코드 채널 [코딩의 숲](https://discord.gg/EQaMqSC5ca)에서 만들게 된 자료입니다.
 
 모두가 편히 볼 수 있고 접근 하며, 기여할 수 있도록 오픈소스 및 웹페이지로 공개합니다.
 
